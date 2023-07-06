@@ -1,0 +1,6 @@
+RP: We'll walk slowly, it's ok.
+LC: Yes. # affirm()
+RP: Umm... Where are the lifts? # request(location(lifts))
+ARI: The lifts are at the entrance on the left. # inform(location(lifts))
+RP: Ok. # acknowledge()
+RP: We'll take the lift then, it'll be easier.

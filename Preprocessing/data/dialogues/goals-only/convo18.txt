@@ -1,0 +1,6 @@
+RP: We'll walk slowly, it's ok.
+LC: Yes.
+RP: Umm... Where are the lifts? @ G(RP, go-to(lifts))
+ARI: The lifts are at the entrance on the left. @ AG(RP, go-to(lifts))
+RP: Ok. @ CG(RP, go-to(lifts))
+RP: We'll take the lift then, it'll be easier.

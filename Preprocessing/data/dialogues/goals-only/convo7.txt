@@ -1,0 +1,17 @@
+ARI: Hello, my name is ARI. How can I help you?
+LP: Hello, I'd like to know where my doctor's office is? I have an appointment with her at 3 PM. @ G(LP, get-info(doctor(room))
+RC: Do you have an appointment at 3 PM?
+ARI: You have to enter the second building behind you. Then it's the second door on the left. @ AG(LP, go-to(doctor(room))
+RC: Ah, that's very good ARI. @ CG(LP, go-to(doctor(room))
+RC: Do we have time for a coffee before we go? @ G(RC, drink(coffee))
+ARI: Yes, of course.
+RC: So where can we get a coffee? @ G(LP+RC, drink(coffee))
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LP+RC, drink(coffee))
+RC: I don't think ARI heard because you spoke at the same time as him.
+ARI: Sorry, can you repeat that please?
+ARI: Do you need information?
+RC: Well, we'd just like to know where we can get a hot chocolate. @ G(LP+RC, drink(hot(chocolate)))
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LP+RC, drink(hot_chocolate))
+RC: Ah, yes.
+ARI: You can order hot or cold sandwiches as well as hot or cold drinks. @ AG(LP+RC, drink(hot_chocolate))
+RC: Ah, that's good, we'll go there. We have time before the appointment.

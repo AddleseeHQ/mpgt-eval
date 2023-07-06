@@ -1,0 +1,23 @@
+ARI: Hello, my name is ARI. How can I help you?
+LP: Where can we eat? @ G(LP+RC, eat())
+RC: ARI, the person that I'm accompanying feels intimidated by by you, and and they'd like to know where they can eat. @ G(LP, eat())
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LP+RC, eat()); G(LP, eat())
+LP: Are there toilets? And where are they? @ G(LP, go-to(toilet))
+RC: I'm asking on behalf of the person that I'm accompanying, who is asking me, well, where are the toilets? @ G(LP, go-to(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. @ AG(LP, go-to(toilet))
+LP: Are they accessible by disabled people? @ G(LP, get-info(toilet(accessible)))
+RC: My... My friend doesn't walk very well, can he get into the toilets with his... @ G(LP, get-info(toilet(accessible)))
+LP: Wheelchair.
+RC: his wheelchair? @ G(LP, get-info(toilet(accessible)))
+ARI: Yes, absolutely. @ AG(LP, get-info(toilet(accessible)))
+LP: I have an appointment in room 17, where is it? @ G(LP, go-to(room_17))
+RC: And he's a bit lost, he has an appointment, he's been asked to go to, to go to room 17. Could you tell us where to go, please? @ G(LP, go-to(room_17))
+ARI: The examination room is on the second floor. You just have to go to the counter on the left and then a nurse will come and take care of you. The lifts are at the entrance on the left. @ AG(LP, go-to(room_17))
+LP: Is it wheelchair accessible? @ G(LP, get-info(is_accessible(lift)))
+RC: Is the lift wheelchair accessible? Can he use the lift? @ G(LP+RC, get-info(is_accessible(lift)))
+ARI: Yes, you're right. @ AG(LP+RC, get-info(is_accessible(lift)))
+LP: I have an appointment at 10 AM, how long... ah well yes...
+RC: He has an appointment at 10 o'clock. Do you know if there is a waiting time, if he has time for a coffee or do we have to go straight to the treatment room? @ G(LP+RC, get-info(clinic(busyness)))
+ARI: No, there aren't too many people. The doctor will take you on time. @ AG(LP+RC, get-info(clinic(busyness)))
+LP: I don't know...
+ARI: Thank you, see you around, have a nice day.

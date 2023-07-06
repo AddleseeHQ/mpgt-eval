@@ -1,0 +1,20 @@
+ARI: Hello, my name is ARI. How can I help you?
+LC: What time is it, please? @ G(LC, get-info(time))
+ARI: I'm sorry, I don't know the answer.
+LC: Yeah, well it's not much.
+RP: Is there a reception for people who have an appointment like me? @ G(RP, go-to(reception))
+ARI: Yes, of course. The reception is just behind me. Remember to take a ticket on your right. @ AG(RP, go-to(reception))
+RP: Thank you. @ CG(RP, go-to(reception))
+LC: Can we have a coffee? @ G(LC+RP, drink(coffee))
+ARI: You're welcome.
+LC: Can we have a coffee while we wait? @ G(LC+RP, drink(coffee))
+ARI: Yes. There's a cafeteria on the ground floor, near the courtyard. @ AG(LC+RP, drink(coffee))
+RP: Do you know the price of a coffee? @ G(RP, get-info(beverage(coffee(cost))))
+ARI: No. Sorry, I don't have this information.
+LC: Is the coffee from a vending machine or a cafeteria?
+ARI: I'm afraid I can't help you.
+LC: Go ahead.
+ARI: Can I help you?
+RP: I can ask...
+RP: Is the cafeteria open at this time? It's 6 PM, is the cafeteria still open? @ G(RP, get-info(cafe(opening_times)))
+ARI: No. The cafeteria is open from 11 AM to 3 PM. @ AG(RP, get-info(cafe(opening_times)))

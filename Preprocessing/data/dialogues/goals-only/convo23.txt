@@ -1,0 +1,16 @@
+ARI: Hello, I'm ARI the robot. Can I help you?
+RC: Well, um, we'd like to go to room 17 for an appointment. Where is... Which way should we go to get to room 17? @ G(LP+RC, go-to(room_17))
+ARI: The examination room is on the second floor. You just have to go to the counter on the left and then a nurse will come and take care of you. @ AG(LP+RC, go-to(room_17))
+LP: Do you think he's going to take us to room 17? Because it looks like he's stuck here.
+RC: Oh, I think so. Room 17...
+LP: How could we ask him?
+RC: It is room 17 that you're showing us to?
+ARI: Yes, you're right.
+RC: So everything's fine, we can go. We have an appointment in 5 minutes, do we have time to go there?
+ARI: Yes, of course.
+LP: Yes, my friend has forgotten his appointment time. He can't remember the doctor's name either, can you help us please? Will he ever move? @ G(LP, get-info(appt(time))); G(LP, get-info(doctor(name)))
+ARI: I'm going to call a nurse to come and inform you. Do you have any other questions?
+RC: We'll wait for the nurse.
+ARI: Yes.
+ARI: Thank you, goodbye.
+RC: Goodbye.

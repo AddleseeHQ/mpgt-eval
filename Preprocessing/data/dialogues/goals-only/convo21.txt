@@ -1,0 +1,6 @@
+ARI: Hello, my name is ARI. How can I help you?
+RP: Hello ARI, we have to find a lift to get to the next floor. Where is the lift in this building? @ G(LC+RP, go-to(lift))
+ARI: The lifts are at the entrance on the left. @ AG(LC+RP, go-to(lift))
+RP: Ok, and we have time to have a coffee before going upstairs, is that right? @ G(LP+RC, drink(coffee))
+ARI: Yes, absolutely.
+RP: Wait, so we'll go to the cafeteria before taking the lift.

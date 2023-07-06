@@ -1,0 +1,12 @@
+ARI: Hello, my name is ARI. How can I help you? # greet(); inform(ari(name)); offer-help()
+RP: Yes, I do. I'd like to know where the cafeteria is, um or, I don't know, a restaurant here in the hospital? # request(location(cafe)) @ G(RP, go-to(cafe))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. # inform(directions(cafe)) @ AG(RP, go-to(cafe))
+LC: Um, can you repeat that please? # r-repet(directions(cafe)))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. # p-repet(directions(cafe))
+RP: I'm hard of hearing and the sound is a little low, can you repeat that please? # r-repet(directions(cafe)))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. # p-repet(directions(cafe))
+RP: Ok, thank you. # acknowledge(); thank() @ CG(RP, go-to(cafe))
+RP: So, another question...
+LC: Um, hello. Do you know where the toilets are? # greet(); request(location(toilet)) @ G(LC, go-to(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. It's the second door on the right. # inform(directions(toilet)) @ AG(LC, go-to(toilet))
+LC: Thank you. # thank() @ CG(LC, go-to(toilet))

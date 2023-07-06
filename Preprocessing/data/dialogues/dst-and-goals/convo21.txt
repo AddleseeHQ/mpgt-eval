@@ -1,0 +1,6 @@
+ARI: Hello, my name is ARI. How can I help you? # greet(); inform(ari(name)); offer-help()
+RP: Hello ARI, we have to find a lift to get to the next floor. Where is the lift in this building? # greet(); request(location(lift)) @ G(LC+RP, go-to(lift))
+ARI: The lifts are at the entrance on the left. # inform(location(lift)) @ AG(LC+RP, go-to(lift))
+RP: Ok, and we have time to have a coffee before going upstairs, is that right? # acknowledge(); request(beverage(coffee)) @ G(LP+RC, drink(coffee))
+ARI: Yes, absolutely. # affirm()
+RP: Wait, so we'll go to the cafeteria before taking the lift.

@@ -1,0 +1,34 @@
+ARI: Hello. I'm ARI the robot. Can I help you?
+RP: I have an appointment. I'd like to know where I've got to... where is... where is the appointment for um, the geriatric ward. @ G(RP, get-info(appt(place)))
+ARI: Sorry, I don't have this information. You have to go to the reception.
+RP: For any appointment, I have to go to the reception? Because
+ARI: Yes.
+RP: I have two appointments in a row.
+ARI: Yes, absolutely.
+RP: Ok well, thank you. That's a shame then.
+ARI: Thank you.
+LC: Um, hello. Could you help me?
+ARI: Yes.
+LC: Um, can you tell me where I can get a coffee please? @ G(LC, drink(coffee))
+LC: You know, I'd really like a coffee. @ G(LC, drink(coffee))
+ARI: There are a few options available as part of your visit, and there's also a cafeteria on the ground floor. @ AG(LC, drink(coffee))
+LC: Thank you. @ CG(LC, drink(coffee))
+ARI: Thank you. See you soon.
+RP: Can you
+ARI: Have a nice day.
+RP: repeat what you said about coffee? I didn't hear it very well.
+ARI: There are a few options available as part of your visit, and there's also a cafeteria on the ground floor.
+RP: And, can a patient accompany me or can I accompany a patient to the cafeteria?
+ARI: Yes. Of course.
+RP: Ok. Thank you.
+ARI: Thank you. See you around.
+RP: In the cafeteria
+ARI: Have a nice day.
+RP: do they serve food too or just drinks? @ G(RP, eat())
+ARI: Yes, absolutely. @ AG(RP, eat())
+RP: And what time does the cafeteria close?
+ARI: It's at 11 o'clock.
+RP: At 11 o'clock?
+RP: Um...
+RP: Thank you.
+ARI: Thank you, see you around, have a nice day.

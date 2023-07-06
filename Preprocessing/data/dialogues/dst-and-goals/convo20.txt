@@ -1,0 +1,25 @@
+LC: Well, it's not possible to get information on appointments. But um, how long does it last because there are three phases, if I understood correctly there are three... three types of appointments, I'd like to know how long it will last in total.
+ARI: I'm sorry, but I can't help you. # cant-help()
+LC: Where can I get information? # request(location(reception)) @ G(LC, go-to(reception))
+ARI: I'm afraid I can't help you. # cant-help()
+RP: Ok, I'm going to ask you a question ARI. I have an appointment at Broca hospital on the 25th, but I'm not going to be able to make it. What do I do? Who should I speak to? Should I phone, what should I do?
+ARI: Sorry, I don't have this information. # cant-help()
+LC: Is there a reception or a telephone number? # request(location(reception)) @ G(LC, go-to(reception))
+ARI: Yes. # affirm() @ AG(LC, go-to(reception))
+ARI: Sorry, I don't have this information. # cant-help()
+LC: Well, in the meantime, what we can maybe do, since I've just found my appointment paper and I know what time it starts, we could maybe go for lunch. From what time until what time can we have lunch? # request(cafe(opening_times)) @ G(LC_RP, eat(lunch))
+LC: And... Is it?
+ARI: Sorry, I don't have this information. # cant-help()
+LC: And... Is it possible to have lunch with someone who is hospitalised?
+ARI: Yes of course. # affirm()
+LC: How should I do this? Do I need to make a reservation?
+ARI: No. # disaffirm()
+LC: How far in advance?
+ARI: No. # disaffirm()
+LC: I'm going to take the lift. I don't remember where it is to go to the appointment room and see if someone can give information on appointments. # request(directions(room_17)); request(appt(general_info)) @ G(LC, go-to(lifts)); G(LC, go-to(room_17)); G(LC, get-info(appt(general_info)))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. # inform(directions(lift)) @ AG(LC, go-to(room_17))
+LC: For the lift?
+ARI: Yes. # affirm()
+LC: Thank you very much. # thank()
+ARI: Thank you. # thank()
+ARI: See you around, have a nice day. # bye()

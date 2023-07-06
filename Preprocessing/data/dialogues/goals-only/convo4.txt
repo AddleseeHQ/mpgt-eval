@@ -1,0 +1,19 @@
+ARI: Hello, my name is ARI. How can I help you?
+RC: I'd like to have something with my friend who is sick. Is there a cafeteria? @ G(RC, go-to(cafe))
+ARI: There are a few options available as part of your visit, and there's also a cafeteria on the ground floor. Lunch will be offered at midday if you have afternoon appointments. A snack may be offered after your appointment with the nurse. @ AG(RC, go-to(cafe))
+RC: Thank you. @ CG(RC, go-to(cafe))
+ARI: Thank you.
+LP: Hello Mr Robot. I'm looking for the lifts please. @ G(LP, go-to(lifts))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. @ AG(LP, go-to(lifts))
+LP: Thank you. @ CG(LP, go-to(lifts))
+ARI: Thank you.
+RC: Hello, I'd like to go to the cardiology department. I was told it was on the second floor. Is there a lift to get there? To go up? @ G(RC, go-to(lifts))
+ARI: Yes, absolutely. @ AG(RC, go-to(lifts))
+RC: And can you tell me where it is please? @ G(RC, go-to(lifts))
+ARI: You have to enter the second building behind you. Then it's the second door on the left.
+RC: Ok, thank you. @ CG(RC, go-to(lifts))
+ARI: Thank you.
+LP: Hello, can we have something to eat here? @ G(LP+RC, eat())
+ARI: Yes, absolutely. Lunch will be offered at midday if you have afternoon appointments. A snack may be offered after your appointment with the nurse. @ AG(LP+RC, eat())
+LP: Oh, how lucky, thank you. @ CG(LP+RC, eat())
+ARI: Thank you.

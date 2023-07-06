@@ -1,0 +1,38 @@
+ARI: Hello, I'm ARI the robot. Can I help you? # greet(); inform(name(ari)); offer-help()
+LC: I'd like to have a little coffee before seeing the doctor. # request(beverage(coffee)) @ G(LC, drink(coffee))
+RP: Ah yes, that's a good idea, so we'll... # acknowledge()
+LC: Ok. # acknowledge()
+LC: Is there a cafeteria? # request(location(cafe)) @ G(LC, go-to(cafe))
+ARI: There's a cafeteria on the ground floor, near the courtyard. # inform(location(cafe)) @ AG(LC, go-to(cafe))
+RP: Ok, perfect. # acknowledge() @ CG(LC, go-to(cafe))
+RP: We'll be able to have a coffee or something else. Does that suit you? @ AG(LC, drink(coffee))
+LC: Yes. # affirm() @ CG(LC, drink(coffee))
+RP: We'll go slowly, we have time anyway.
+LC: Do you have to have coffee at the cafe?
+ARI: No. # disaffirm()
+LC: Ok. We'll go straight to the counter. # acknowledge()
+ARI: Yes of course. # acknowledge()
+RP: Ok. # acknowledge()
+RP: Let's go then.
+LC: We'll ask for coffee.
+LC: Yes, yes. # affirm()
+LC: We're going to go see the doctor.
+LC: Are there many people waiting in radiology? # request(clinic(busyness(radiology_department))) @ G(LC, get-info(clinic(busyness(radiology_department))))
+ARI: Sorry, I don't have this information. # cant-help()
+LC: Ok. # acknowledge()
+RP: Ok, it's clear. # acknowledge()
+RP: So maybe we'll go through the reception area again? # suggest(going-to(reception)) @ G(RP, go-to(reception))
+LC: Yes, ok. # accept-sugg(going-to(reception)) @ G(LC+RP, go-to(reception))
+RP: We're going to ask him how to get there. # suggest(requesting(directions(reception))) @ G(RP, go-to(reception))
+LC: Ok. # accept-sugg(requesting(directions(reception))) @ G(LC+RP, go-to(reception))
+RP: Now I'm a little bit lost, I don't know which corridor we came from. # request(help)
+LC: Where is the reception? # request(location(reception)) @ G(LC, go-to(reception))
+ARI: The reception is just behind me. Remember to take a ticket on your right. # inform(location(reception)) @ AG(LC+RP, go-to(reception))
+RP: And which corridor to take to get to the reception? # request(directions(reception)) @ G(LC, go-to(reception))
+ARI: I'm sorry, but I can't help you. # cant-help()
+LC: I may have to go to the toilet before. # request(location(toilet)) @ G(LC, go-to(toilet))
+LC: Where are the toilets, please? # request(location(toilet)) @ G(LC, go-to(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. # inform(location(toilet)) @ AG(LC, go-to(toilet))
+RP: I'll let you go to the toilet, I'll wait for you.
+LC: Ok. # acknowledge()
+ARI: Thank you, see you later, have a nice day. # thank(); bye()

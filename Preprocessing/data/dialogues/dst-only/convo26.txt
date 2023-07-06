@@ -1,0 +1,38 @@
+ARI: Hello, I'm ARI the robot. Can I help you? # greet(); inform(name(ari)); offer-help()
+LC: I'd like to have a little coffee before seeing the doctor. # request(beverage(coffee))
+RP: Ah yes, that's a good idea, so we'll... # acknowledge()
+LC: Ok. # acknowledge()
+LC: Is there a cafeteria? # request(location(cafe))
+ARI: There's a cafeteria on the ground floor, near the courtyard. # inform(location(cafe))
+RP: Ok, perfect. # acknowledge()
+RP: We'll be able to have a coffee or something else. Does that suit you?
+LC: Yes. # affirm()
+RP: We'll go slowly, we have time anyway.
+LC: Do you have to have coffee at the cafe?
+ARI: No. # disaffirm()
+LC: Ok. We'll go straight to the counter. # acknowledge()
+ARI: Yes of course. # acknowledge()
+RP: Ok. # acknowledge()
+RP: Let's go then.
+LC: We'll ask for coffee.
+LC: Yes, yes. # affirm()
+LC: We're going to go see the doctor.
+LC: Are there many people waiting in radiology? # request(clinic(busyness(radiology_department)))
+ARI: Sorry, I don't have this information. # cant-help()
+LC: Ok. # acknowledge()
+RP: Ok, it's clear. # acknowledge()
+RP: So maybe we'll go through the reception area again? # suggest(going-to(reception))
+LC: Yes, ok. # accept-sugg(going-to(reception))
+RP: We're going to ask him how to get there. # suggest(requesting(directions(reception)))
+LC: Ok. # accept-sugg(requesting(directions(reception)))
+RP: Now I'm a little bit lost, I don't know which corridor we came from. # request(help)
+LC: Where is the reception? # request(location(reception))
+ARI: The reception is just behind me. Remember to take a ticket on your right. # inform(location(reception))
+RP: And which corridor to take to get to the reception? # request(directions(reception))
+ARI: I'm sorry, but I can't help you. # cant-help()
+LC: I may have to go to the toilet before. # request(location(toilet))
+LC: Where are the toilets, please? # request(location(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. # inform(location(toilet))
+RP: I'll let you go to the toilet, I'll wait for you.
+LC: Ok. # acknowledge()
+ARI: Thank you, see you later, have a nice day. # thank(); bye()

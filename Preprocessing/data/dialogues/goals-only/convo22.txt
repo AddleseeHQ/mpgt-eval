@@ -1,0 +1,11 @@
+ARI: Hello, my name is ARI. How can I help you?
+LP: Where is room 17? @ G(LP, go-to(room_17))
+ARI: The examination room is on the second floor. You just have to go to the counter on the left and then a nurse will come and take care of you. @ AG(LP, go-to(room_17))
+RC: How do I get to room 17? Do I have to take the lift? @ G(RC, go-to(room_17))
+ARI: The examination room is on the second floor. You just have to go to the counter on the left and then a nurse will come and take care of you. The lifts are at the entrance on the left. @ AG(RC, go-to(room_17))
+LP: How long before my appointment? @ G(LP, get-info(appt(time))
+RC: ARI, can you... sorry... He isn't responding.
+RC: ARI?
+ARI: I'll call a nurse to come and inform you.
+RC: ARI, I don't have a watch, is there a clock in the room so I can find out the time? @ G(RC, get-info(time))
+ARI: Sorry, I don't have this information. You have to go to the reception.

@@ -1,0 +1,66 @@
+LP: Well it's my first time here, I don't know if this is the case for you. I'd really like to um... to be able, to be able to eat a little bit before going to my appointment, do you know where that is? # request(food) @ G(LP, eat())
+RC: You have a good idea...
+LP: So um, is it... # incomplete-da()
+RC: But I don't know where we eat, so what do I do? What do I do? # request(help)
+LP: So, can we eat? Is there a designated area for visitors? # request(food) @ G(LP+RC, eat())
+RC: Before lunch, I'd like to have breakfast. So where can we go? # request(food(breakfast)) @ G(RC, eat(breakfast))
+LP: Well, no idea.
+RC: We'll ask the question.
+LP: I have no idea where. First of all, if it's open to outsiders.
+RC: I don't know.
+LP: So um... # incomplete-da()
+RC: We'll ask him.
+RC: I don't know what your name is. Can you give us information and tell us what your name is? # request(ari(name)) @ G(LP+RC, get-info(ari(name)))
+ARI: Hello, my name is ARI. # greet(); inform(ari(name)) @ AG(LP+RC, get-info(ari(name)))
+RC: Where's the cafeteria? # request(location(cafe)) @ G(RC, go-to(cafe))
+ARI: How can I help you? # offer-help()
+ARI: There are a few options available as part of your visit, and there's also a cafeteria on the ground floor. # inform(location(cafe)) @ AG(RC, go-to(cafe))
+RC: On the ground floor.
+LP: And how do we get to the cafeteria? # request(directions(cafe)) @ G(LP+RC, go-to(cafe))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. # inform(directions(cafe)) @ AG(LP+RC, go-to(cafe))
+LP: The second building, um... Do we take do we take the walkway?
+ARI: Yes. # affirm()
+RC: I'd really like to know what we can eat. I want a croissant and a large white coffee. # request(food(croissant)); request(beverage(coffee)) @ G(LP+RC, eat()); G(RC, eat(croissant)); G(RC, drink(coffee))
+ARI: Today we have an endive salad to start, followed by a ham and cheese escalope with a side of mashed potato and a fruit compote for dessert. # inform(food(menu)) @ AG(LP+RC, eat()); AG(RC, eat(croissant)); AG(RC, drink(coffee))
+LP: Yes, that's for lunch. We would like a snack, wouldn't we? Grab a coffee or breakfast, since we're early for our appointment. # request(food(snack)); request(beverage(coffee)); request(food(breakfast)) @ G(LP+RC, eat(snack)); G(LP+RC, drink(coffee)); G(LP+RC, eat(breakfast))
+ARI: Of course. # affirm()
+RC: And I'd really like to go to the toilet too. # request(location(toilet)) @ G(RC, go-to(toilet))
+RC: Can you tell us where the toilets are? # request(location(toilet)) @ G(LP+RC, go-to(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. It's the second door on the right. # inform(directions(toilet)) @ AG(LP+RC, go-to(toilet))
+RC: Second door on the right. Oh well, we'll find it.
+LP: Next to so it's next to the cafeteria? # r-confirm(location(toilet)) @ G(LP+RC, go-to(toilet))
+ARI: Absolutely. # affirm() @ AG(LP+RC, go-to(toilet))
+RC: I feel like it's further away. That, that's not on the ground floor.
+LP: I'm having difficulty understanding what he's saying. I can't hear very well. # cant-hear()
+ARI: Very easy! You have to go to the corridor at the end of the room. It's the second door on the right. # p-repet(directions(toilet)) @ AG(LP+RC, go-to(toilet))
+LP: In the corridor at the end of the room, on which side? # request(location(toilet)) @ G(LP, go-to(toilet))
+RC: We'll let it go.
+LP: We'll leave it, we'll leave it.
+RC: We're going to eat something already. I'm very hungry. # request(food) @ G(LP+RC, eat())
+RC: Do you think it's still time? Until what time is breakfast served? # request(food(breakfast)) @ G(RC, eat(breakfast))
+ARI: Yes. # affirm() @ AG(RC, eat(breakfast))
+ARI: Sorry, I don't have this information. # cant-help()
+LP: Um so, if I've understood correctly, the toilets are next to the cafeteria. # r-confirm(location(toilet))
+ARI: Absolutely. # affirm()
+LP: I'm having a hard time hearing actually. # cant-hear()
+RC: Could you speak a little louder? # change-volume(turn_up)
+ARI: I'm afraid I can't help you. # cant-help()
+RC: You can't help us, so what are we going to do? We'll see something else maybe. # request(help)
+LP: So um... # incomplete-da()
+LP: So maybe we'll go and have a look. Ah yes but well I think I've forgotten my sheet.
+LP: I know I have an appointment but I don't know what time it's at. How can I find out my appointment time? # request(appt(time)) @ G(LP, get-info(appt(time)))
+ARI: I'm afraid I can't help you. # cant-help()
+RC: Well, firstly do you know where to find um which doctor it is, which department, which specialty.
+LP: Is there a reception? # request(location(reception)) @ G(LP, go-to(reception))
+ARI: You'll have several appointments with different health professionals, at least three. First, a nurse will ask you questions about your health and carry out an initial assessment of your current condition. Next, you will discuss your difficulties with a neuropsychologist who will suggest tests to assess your abilities as accurately as possible. Then, you will see a geriatrician who will summarise all this data and suggest different types of follow-up depending on your results. # inform(appt(general_info))
+LP: Um, how do I know what time my appointment is? # request(appt(time)) @ G(LP, get-info(appt(time)))
+ARI: Sorry, I don't have this information. # cant-help()
+LP: Um... And... And where is um... Um, I, I remember, I think it's room 17. But I'm not sure. Where is room 17? # request(location(room_17)) @ G(LP, go-to(room_17))
+ARI: You continue along the building, take the lift and it's on the second floor. # inform(directions(room_17)) @ AG(LP, go-to(room_17))
+LP: And you arrive directly in room 17? # r-confirm(directions(room_17)) @ G(LP, go-to(room_17))
+ARI: Of course. # affirm() @ AG(LP, go-to(room_17))
+RC: Maybe it's at the reception. Maybe there's a service, a receptionist who will let you know who will tell you. # request(location(reception)) @ G(RC, go-to(reception))
+LP: So my appointment time will be confirmed in room 17? # request(appt(place)) @ G(LP, get-info(appt(place)))
+ARI: Thank you. See you around. Have a nice day. # thank(); bye()
+RC: Thank you. # thank()
+LP: Have a nice day. # bye()

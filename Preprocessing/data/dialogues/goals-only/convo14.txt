@@ -1,0 +1,10 @@
+ARI: Hello, my name is ARI. How can I help you?
+LC: I'm hungry. @ G(LC, eat())
+LC: I'm hungry. @ G(LC, eat())
+RP: I'm hungry. @ G(RP, eat())
+LC: I'd like to eat. @ G(LC, eat())
+ARI: It's the most important question of the day. Are you hungry yet? @ AG(LC, eat()); AG(RP, eat())
+RP: Yes. @ G(RP, eat())
+ARI: You can ask my colleague in the room who is responsible for the meals. @ AG(LC, eat()); AG(RP, eat())
+LC: I'd like to go to the toilet before the consultation. @ G(LC, go-to(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. It's the second door on the right. @ AG(LC, go-to(toilet))

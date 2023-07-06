@@ -1,0 +1,52 @@
+ARI: Hello, my name is ARI. Can I help you?
+LC: Do you want to go to the toilet? @ G(LC, go-to(toilet))
+RP: Oh yes. And it's urgent. @ G(LC+RP, go-to(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. It's the second door on the right. @ AG(LC+RP, go-to(toilet))
+RP: Is it for women? @ G(RP, go-to(toilet(for_women)))
+ARI: Yes. @ AG(RP, go-to(toilet(for_women)))
+RP: Thanks. @ CG(RP, go-to(toilet(for_women)))
+ARI: Thank you.
+RP: Oh, well, I'd love to. @ G(LC+RP, eat())
+RP: What's good on your menu? @ G(RP, eat())
+ARI: Lunch will be offered at midday if you have afternoon appointments. A snack may be offered after your appointment with the nurse. @ AG(LC+RP, eat())
+RP: But what if I have an appointment in the morning?
+ARI: I'm afraid I can't help you.
+RP: So we don't eat, we aren't offered breakfast? @ G(LC+RP, eat())
+ARI: I'm sorry, but I can't help you.
+RP: Well, thanks anyway.
+ARI: Thank you very much.
+LC: Can you tell me where room 17 is? @ G(LC, go-to(room_17))
+RP: Oh, but I don't know.
+RP: Is room 17 on the ground floor? @ G(RP, go-to(room_17))
+ARI: I'm afraid I can't help you.
+RP: Where is room 17? @ G(RP, go-to(room_17))
+LC: Normally, I have an appointment.
+RP: I have an appointment in room 17. @ G(RP, go-to(room_17))
+ARI: I'm afraid I can't help you.
+RP: So, where do the appointments take place? Where are the appointments? @ G(RP, get-info(appt(place)))
+ARI: I'm afraid I can't help you.
+RP: Do you have another number for me?
+ARI: I'm sorry, but I can't help you.
+RP: Okay well, thank you then.
+LC: The appointment was scheduled for four o'clock.
+RP: My appointment was scheduled for four o'clock.
+ARI: Yes.
+RP: An appointment of... gerontology.
+ARI: Of course.
+RP: Where should I... Where should I go in the hospital?
+ARI: I'm afraid I can't help you.
+RP: Can't you tell me what floor?
+ARI: I'm sorry, but I can't help you.
+LC: Can we not have...
+RP: Do I ask at the reception?
+ARI: I'm afraid I can't help you.
+RP: Well, thank you.
+ARI: Thanks.
+RP: Can I have a coffee while I wait? @ G(RP, drink(coffee))
+ARI: There are a few options available as part of your visit, and there's also a cafeteria on the ground floor. @ AG(RP, drink(coffee))
+RP: And I can have everything I want at this cafeteria?
+ARI: Yes. Of course.
+RP: Oh, that's nice.
+RP: Thank you.
+ARI: Thank you.
+ARI: See you around.

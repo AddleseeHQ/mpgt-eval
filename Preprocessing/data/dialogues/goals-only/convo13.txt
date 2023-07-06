@@ -1,0 +1,26 @@
+ARI: Hello, I'm ARI the robot. Can I help you?
+RC: So it's...
+LP: Yes. So um... So um...
+RC: Yes?
+RC: I'd like to know how to get to the lift. @ G(RC, go-to(lifts))
+ARI: Of course. The lifts are at the entrance on the left. @ AG(RC, go-to(lifts))
+LP: It's nice of you to answer us.
+RC: Thank you very much. @ CG(RC, go-to(lifts))
+LP: Thanks ARI.
+LP: Maybe we could ask him if there's anything to eat? @ G(LP, eat())
+RC: Yes, yes. @ G(LP+RC, eat())
+RC: And also, could you show us to the cafeteria? If there is one in the hospital. @ G(LP+RC, go-to(cafe))
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LP+RC, eat()); AG(LP+RC, go-to(cafe))
+LP: How do we get there ARI? @ G(LP+RC, go-to(cafe))
+ARI: Sorry, I don't have this information.
+LP: Do we have to take the lift?
+ARI: Yes.
+RC: So you don't know how to get to the cafeteria? Because yesterday... @ G(RC, go-to(cafe))
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(RC, go-to(cafe))
+LP: So it's on the ground floor.
+RC: Yes, that's it.
+ARI: Yes, absolutely.
+RC: Can you take us there by any chance?
+ARI: I'm sorry, I can't give you that information. I'll call a nurse to come and help you.
+RC: Thank you very much.
+LP: Thank you ARI.

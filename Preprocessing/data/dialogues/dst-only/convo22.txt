@@ -1,0 +1,11 @@
+ARI: Hello, my name is ARI. How can I help you? # greet(); inform(ari(name)); offer-help()
+LP: Where is room 17? # request(location(room_17))
+ARI: The examination room is on the second floor. You just have to go to the counter on the left and then a nurse will come and take care of you. # inform(location(room_17))
+RC: How do I get to room 17? Do I have to take the lift? # request(directions(room_17))
+ARI: The examination room is on the second floor. You just have to go to the counter on the left and then a nurse will come and take care of you. The lifts are at the entrance on the left. # inform(directions(room_17))
+LP: How long before my appointment? # request(appt(time))
+RC: ARI, can you... sorry... He isn't responding. # incomplete-da()
+RC: ARI?
+ARI: I'll call a nurse to come and inform you. # call-nurse()
+RC: ARI, I don't have a watch, is there a clock in the room so I can find out the time? # request(time)
+ARI: Sorry, I don't have this information. You have to go to the reception. # cant-help(); suggest(going-to(reception))

@@ -1,0 +1,38 @@
+ARI: Hello. My name is ARI. Can I help you?
+LC: Um hello, okay, I think we need to find the rheumatology ward. @ G(LC+RP, go-to(rheumatology_ward))
+RP: Yes, I think that's it. Ok, we'll see if he can give us any information.
+LC: Mhm.
+RP: So do you want to ask him or do you want me to? I'll do it.
+RP: I'd like to find the rheumatology ward. @ G(RP, go-to(rheumatology_ward))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. @ AG(LC+RP, go-to(rheumatology_ward))
+RP: Ok, he told us to go to the building behind us, it's the second door on the left. He's giving us directions. That's handy. There you go. @ CG(LC+RP, go-to(rheumatology_ward))
+LC: Ok.
+LC: What time was our appointment? @ G(LC, get-info(appt(time)))
+RP: So we have an appointment at 10.30 PM. @ AG(LC, get-info(appt(time)))
+LC: Ok. @ CG(LC, get-info(appt(time)))
+RP: It's 10 PM just now so we have plenty of time.
+LC: Ok.
+RP: We have time.
+LC: We'll walk slowly.
+RP: We'll walk slowly.
+LC: Yes.
+RP: There's no need to worry.
+RP: Ok, there you go, we're in the ward. We need to ask where the reception for this ward is. @ G(LC+RP, go-to(reception))
+LC: Ok.
+RP: Well that's it, we've arrived.
+LC: Ok. Very good.
+RP: Do you want to ask him?
+LC: Ok.
+LC: Um... Where is the reception for the rheumatology ward? @ G(LC, go-to(reception))
+ARI: The reception is just behind me. Remember to take a ticket on your right. @ AG(LC+RP, go-to(reception))
+LC: Ah...
+RP: Ok, thank you. @ CG(LC+RP, go-to(reception))
+RP: So we'll take a ticket.
+LC: Mhm...
+RP: And then we'll wait until we're called.
+LC: Ok. Is there's a waiting room? @ G(LC, go-to(waiting_room))
+RP: Yes, there's a waiting room just there. We can sit down. @ AG(LC, go-to(waiting_room))
+LC: Ok. @ CG(LC, go-to(waiting_room))
+RP: So you don't get tired.
+LC: Ok.
+ARI: Thank you, see you later, have a nice day.

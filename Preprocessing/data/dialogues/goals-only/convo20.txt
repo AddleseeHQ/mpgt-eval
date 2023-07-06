@@ -1,0 +1,25 @@
+LC: Well, it's not possible to get information on appointments. But um, how long does it last because there are three phases, if I understood correctly there are three... three types of appointments, I'd like to know how long it will last in total.
+ARI: I'm sorry, but I can't help you.
+LC: Where can I get information? @ G(LC, go-to(reception))
+ARI: I'm afraid I can't help you.
+RP: Ok, I'm going to ask you a question ARI. I have an appointment at Broca hospital on the 25th, but I'm not going to be able to make it. What do I do? Who should I speak to? Should I phone, what should I do?
+ARI: Sorry, I don't have this information.
+LC: Is there a reception or a telephone number? @ G(LC, go-to(reception))
+ARI: Yes. @ AG(LC, go-to(reception))
+ARI: Sorry, I don't have this information.
+LC: Well, in the meantime, what we can maybe do, since I've just found my appointment paper and I know what time it starts, we could maybe go for lunch. From what time until what time can we have lunch? @ G(LC_RP, eat(lunch))
+LC: And... Is it?
+ARI: Sorry, I don't have this information.
+LC: And... Is it possible to have lunch with someone who is hospitalised?
+ARI: Yes of course.
+LC: How should I do this? Do I need to make a reservation?
+ARI: No.
+LC: How far in advance?
+ARI: No.
+LC: I'm going to take the lift. I don't remember where it is to go to the appointment room and see if someone can give information on appointments. @ G(LC, go-to(lifts)); G(LC, go-to(room_17)); G(LC, get-info(appt(general_info)))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. @ AG(LC, go-to(room_17))
+LC: For the lift?
+ARI: Yes.
+LC: Thank you very much.
+ARI: Thank you.
+ARI: See you around, have a nice day.

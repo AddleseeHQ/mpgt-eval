@@ -1,0 +1,34 @@
+ARI: Hello, my name is ARI. How can I help you?
+LP: Hello I I'd really like I'm hungry I'd really like to eat. And is the room air-conditioned? The restaurant? @ G(LP, eat()); G(LP, get-info(cafe(air_conditioning)))
+ARI: Yes. Of course. @ AG(LP, get-info(cafe(air_conditioning)))
+ARI: Lunch will be offered at midday if you have afternoon appointments. A snack may be offered after your appointment with the nurse. @ AG(LP, eat())
+LP: So, Mrs companion, do you know what I'll be eating today? @ G(LP, eat())
+RC: Oh but no, I don't know, I'm going to ask.
+RC: Can you tell us if there is a cafeteria? We've been very well received here, and I have no directions. I'm looking for a cafeteria to have a coffee or a hot chocolate. @ G(RC, go-to(cafe)); G(RC, drink(coffee)); G(RC, drink(hot_chocolate))
+ARI: There are a few options available as part of your visit, and there's also a cafeteria on the ground floor. @ AG(RC, go-to(cafe))
+RC: Can you tell me where on the ground floor? Right, left, straight ahead? @ G(RC, go-to(cafe))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. @ AG(RC, go-to(cafe))
+RC: Okay, thank you. @ CG(RC, go-to(cafe))
+RC: Um also...
+LP: Um what time can we have lunch? @ G(LP+RC, eat(lunch))
+RC: Can you tell me the cafeteria opening hours? Are there set opening hours? @ G(RC, get-info(cafe(opening_times)))
+ARI: It's at 11 o'clock. @ AG(RC, get-info(cafe(opening_times)))
+RC: Ah, it opens at 11 o'clock? @ G(RC, get-info(cafe(opening_times)))
+ARI: Yes. @ AG(RC, go-to(cafe))
+RC: And what time does it close? @ G(RC, get-info(cafe(opening_times)))
+ARI: I'm sorry, I don't have this information.
+RC: Ah, that's a shame, thank you.
+LP: Is there...
+ARI: Thank you.
+LP: Is there a lift to get to the cafeteria? @ G(LP, go-to(cafe))
+RC: Um no, because it's on the ground floor.
+LP: Oh ok.
+RC: But could you please tell us where the lifts are? Where at the entrance are they located?
+ARI: You have to enter the second building behind you. Then it's the second door on the left.
+RC: Um for the lifts?
+ARI: Yes.
+RC: You already told me this for the cafeteria. So the lifts and the cafeteria are right next to each other?
+ARI: Absolutely.
+RC: Oh, okay, thank you very much.
+ARI: Thank you.
+ARI: See you around. Have a nice day.

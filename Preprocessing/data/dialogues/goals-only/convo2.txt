@@ -1,0 +1,19 @@
+LC: Hello.
+ARI: Hello, my name is ARI. How can I help you?
+LC: We're looking for a way to get to room 17, aren't we? @ G(LC+RP, go-to(room_17))
+RP: Yes.
+RP: Yes, we need to go to room 17 for treatment. @ G(LC+RP, go-to(room_17))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. @ AG(LC+RP, go-to(room_17))
+LC: Thank you. @ CG(LC+RP, go-to(room_17))
+RP: Thank you.
+LC: Do you, do you know what time our appointment is? @ G(LC, get-info(appt(time)))
+RP: Do you need the name?
+ARI: You'll have several appointments with different health professionals, at least three. First, a nurse will ask you questions about your health and carry out an initial assessment of your current condition. Next, you will discuss your difficulties with a neuropsychologist who will suggest tests to assess your abilities as accurately as possible. Then, you will see a geriatrician who will summarise all this data and suggest different types of follow-up depending on your results.
+RP: Thank you, but I can't hear very well. Couldn't you speak a little louder?
+ARI: Sorry, but I can't help you.
+LC: Ok.
+RP: Thank you.
+ARI: You're welcome, I'm here to answer your questions.
+LC: Thank you ARI, have a nice day.
+RP: Thank you.
+ARI: Thank you, see you around, have a nice day.

@@ -1,0 +1,38 @@
+ARI: Hello, I'm ARI the robot. Can I help you?
+LC: I'd like to have a little coffee before seeing the doctor. @ G(LC, drink(coffee))
+RP: Ah yes, that's a good idea, so we'll...
+LC: Ok.
+LC: Is there a cafeteria? @ G(LC, go-to(cafe))
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LC, go-to(cafe))
+RP: Ok, perfect. @ CG(LC, go-to(cafe))
+RP: We'll be able to have a coffee or something else. Does that suit you? @ AG(LC, drink(coffee))
+LC: Yes. @ CG(LC, drink(coffee))
+RP: We'll go slowly, we have time anyway.
+LC: Do you have to have coffee at the cafe?
+ARI: No.
+LC: Ok. We'll go straight to the counter.
+ARI: Yes of course.
+RP: Ok.
+RP: Let's go then.
+LC: We'll ask for coffee.
+LC: Yes, yes.
+LC: We're going to go see the doctor.
+LC: Are there many people waiting in radiology? @ G(LC, get-info(clinic(busyness(radiology_department))))
+ARI: Sorry, I don't have this information.
+LC: Ok.
+RP: Ok, it's clear.
+RP: So maybe we'll go through the reception area again? @ G(RP, go-to(reception))
+LC: Yes, ok. @ G(LC+RP, go-to(reception))
+RP: We're going to ask him how to get there. @ G(RP, go-to(reception))
+LC: Ok. @ G(LC+RP, go-to(reception))
+RP: Now I'm a little bit lost, I don't know which corridor we came from.
+LC: Where is the reception? @ G(LC, go-to(reception))
+ARI: The reception is just behind me. Remember to take a ticket on your right. @ AG(LC+RP, go-to(reception))
+RP: And which corridor to take to get to the reception? @ G(LC, go-to(reception))
+ARI: I'm sorry, but I can't help you.
+LC: I may have to go to the toilet before. @ G(LC, go-to(toilet))
+LC: Where are the toilets, please? @ G(LC, go-to(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. @ AG(LC, go-to(toilet))
+RP: I'll let you go to the toilet, I'll wait for you.
+LC: Ok.
+ARI: Thank you, see you later, have a nice day.

@@ -1,0 +1,19 @@
+LC: I'd prefer a hot chocolate. @ G(LC, drink(hot_chocolate))
+RP: And why not herbal tea? @ G(RP, drink(herbal_tea))
+LC: Well, yes. @ G(LC, drink(herbal_tea))
+RP: To de-stress. @ G(RP, drink(herbal_tea))
+RP: Could we have a hot drink to relax a bit? We're a little bit annoyed, stressed out from all of this. The hospital is complicated, isn't it? @ G(LC+RP, drink(hot_drink))
+ARI: Yes, there's a cafeteria on the ground floor, near the courtyard. You can order hot or cold sandwiches as well as hot or cold drinks. @ AG(LC+RP, drink(hot_drink))
+RP: Well, great, thank you. @ CG(LC+RP, drink(hot_drink))
+LC: I see a sign, but I don't know what it means.
+RP: Ah.
+LC: Is it a round trip?
+RP: Ah, ah, yes.
+RP: How do we get to the ground floor, do we take the lift? How do we do it? @ G(LC+RP, go_to(ground_floor))
+ARI: Yes, the lifts are at the entrance on the left.
+RP: Ah great, thank you. @ CG(LC+RP, go_to(ground_floor))
+RP: Goodbye.
+ARI: You're welcome.
+RP: We don't need you anymore, goodbye.
+ARI: Thank you, see you later, have a nice day.
+RP: Great, well, we're done.

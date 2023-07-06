@@ -1,0 +1,22 @@
+ARI: Hello. My name is ARI. Can I help you?
+LC: Hello, so what do we need to find as...
+RP: So I think yes, we'll ask him you want is there a cafeteria or a place where we can eat. @ G(LC+RP, eat())
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LC+RP, eat())
+LC: Ok, thank you. @ CG(LC+RP, eat())
+RP: Okay, perfect.
+RP: Do you want to have a coffee before your appointment? @ G(RP, drink(coffee))
+LC: Yes, since we have half an hour before the appointment we can have something. @ G(LC+RP, drink(coffee))
+RP: Perfect, let's go then.
+LC: Ok.
+RP: Ok, we'll take it slowly, we'll get there.
+LC: Yes.
+RP: So we can ask where the counter is to get a coffee? @ G(RP, drink(coffee))
+LC: Yes. @ G(LC+RP, drink(coffee))
+RP: Ok.
+LC: Umm... Where exactly do you go for a coffee? @ G(LC, drink(coffee))
+ARI: I'm sorry, but I can't help you.
+RP: We'll ask him again.
+RP: Umm... We're looking for the cafeteria. @ G(LC+RP, go-to(cafe))
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LC+RP, go-to(cafe))
+RP: Yes well thank you. @ CG(LC+RP, go-to(cafe))
+RP: However, he wasn't able to tell us if there was a special counter for coffees, it doesn't matter.

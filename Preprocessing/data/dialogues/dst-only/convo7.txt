@@ -1,0 +1,17 @@
+ARI: Hello, my name is ARI. How can I help you? # greet(); inform(ari(name)); offer-help()
+LP: Hello, I'd like to know where my doctor's office is? I have an appointment with her at 3 PM. # greet(); request(doctor(room))
+RC: Do you have an appointment at 3 PM?
+ARI: You have to enter the second building behind you. Then it's the second door on the left. # inform(directions(doctor(room))
+RC: Ah, that's very good ARI. # acknowledge(); give-feedback(positive)
+RC: Do we have time for a coffee before we go? # request(beverage(coffee))
+ARI: Yes, of course.
+RC: So where can we get a coffee? # request(beverage(coffee))
+ARI: There's a cafeteria on the ground floor, near the courtyard. # inform(location(cafe))
+RC: I don't think ARI heard because you spoke at the same time as him.
+ARI: Sorry, can you repeat that please? # r-repet()
+ARI: Do you need information? # offer-help()
+RC: Well, we'd just like to know where we can get a hot chocolate. # request(beverage(hot_chocolate))
+ARI: There's a cafeteria on the ground floor, near the courtyard. # inform(location(cafe))
+RC: Ah, yes. # acknowledge()
+ARI: You can order hot or cold sandwiches as well as hot or cold drinks. # inform(food); inform(drink)
+RC: Ah, that's good, we'll go there. We have time before the appointment. # acknowledge()

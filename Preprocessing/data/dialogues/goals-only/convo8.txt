@@ -1,0 +1,82 @@
+LP: Well, yeah, but you do what you want.
+LP: What time is my appointment with the doctor? @ G(LP, get-info(appt(time)))
+RC: I think it's 10 o'clock. @ AG(LP, get-info(appt(time)))
+RC: What time is the appointment? @ G(RC, get-info(appt(time)))
+RC: I have an appointment with the doctor. @ G(RC, get-info(appt(general_info)))
+ARI: You'll have several appointments with different health professionals, at least three. First, a nurse will ask you questions about your health and carry out an initial assessment of your current condition. Next, you will discuss your difficulties with a neuropsychologist who will suggest tests to assess your abilities as accurately as possible. Then, you will see a geriatrician who will summarise all this data and suggest different types of follow-up depending on your results. @ AG(RC, get-info(appt(general_info)))
+LP: And who is my geriatrician?
+ARI: I'm sorry, but I can't help you.
+RC: That's a shame.
+LP: And where is the consultation room to go see my doctor?
+RC: Is it my turn?
+ARI: I'm afraid I can't help you.
+RC: Is it right or left?
+LP: Is there a reception at the hospital? @ G(LP, go-to(reception))
+RC: Yes, I think so. @ AG(LP, go-to(reception))
+RC: Where is the reception? @ G(RC, go-to(reception))
+ARI: I'm sorry, but I can't help you.
+RC: Where do I go for information? @ G(RC, go-to(reception))
+LP: I'd like a coffee. @ G(LP, drink(coffee))
+RC: Where is the cafeteria? @ G(RC, go-to(cafe))
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LP, drink(coffee)); AG(RC, go-to(cafe))
+LP: How do we get to the ground floor? @ G(LP+RC, go-to(ground_floor))
+RC: How do we get to the ground floor? @ G(LP+RC, go-to(ground_floor))
+ARI: I'm afraid I can't help you.
+RC: Which floor is the cafeteria on? @ G(RC, go-to(cafe))
+ARI: I'm afraid I can't help you.
+RC: Where is the cafeteria? @ G(RC, go-to(cafe))
+ARI: I'm sorry, but I can't help you.
+LP: How much time do we have for a coffee before the first consultation? @ G(LP, get-info(appt(time)))
+ARI: You'll have several appointments with different health professionals, at least three. First, a nurse will ask you questions about your health and carry out an initial assessment of your current condition. Next, you will discuss your difficulties with a neuropsychologist who will suggest tests to assess your abilities as accurately as possible. Then, you will see a geriatrician who will summarise all this data and suggest different types of follow-up depending on your results. @ AG(LP, get-info(appt(time)))
+RC: Yes, but at what time? @ G(RC, get-info(appt(time)))
+ARI: I'm afraid I can't help you.
+LP: I was told that there was a lift in the hospital to get to the next floor. Does he know where it is? @ G(LP, go-to(lifts))
+RC: Where is the lift to go up? @ G(RC, go-to(lifts))
+ARI: I'm sorry, but I can't help you.
+LP: Are there stairs? @ G(LP, go-to(stairs))
+RC: And the stairs? @ G(RC, go-to(stairs))
+RC: Are there no stairs to get to the next floor? @ G(RC, go-to(stairs))
+ARI: Yes, of course. @ AG(LP, go-to(stairs)); AG(RC, go-to(stairs))
+RC: And where are they? @ G(RC, go-to(stairs))
+ARI: I'm afraid I can't help you.
+RC: Where should I go for information? @ G(RC, go-to(reception))
+ARI: I'm afraid I can't help you.
+RC: What should we do?
+ARI: I'm sorry, but I can't help you.
+LP: And how can it help us?
+RC: So this...
+RC: What can you tell us? @ G(RC, get-info(ari(wcud)))
+RC: How many floors does the hospital have? @ G(RC, get-info(clinic(num_floors)))
+ARI: I'm sorry, but I can't help you.
+LP: But I'm thirsty. I need water. @ G(LP, drink(water))
+RC: But we are thirsty, we need water. @ G(LP+RC, drink(water))
+ARI: There are a few options available as part of your visit, and there's also a cafeteria on the ground floor. @ AG(LP+RC, drink(water)
+RC: And is there water in the cafeteria? @ G(RC, drink(water))
+ARI: Of course. @ AG(RC, drink(water))
+LP: Is there coffee too? @ G(LP, drink(coffee))
+RC: And coffee? Is there coffee? @ G(RC, drink(coffee))
+ARI: Absolutely. @ AG(LP, drink(coffee)); AG(RC, drink(coffee))
+RC: And tea? @ G(RC, drink(tea))
+ARI: Yes. @ AG(RC, drink(tea))
+LP: What is there to eat? @ G(LP, eat())
+RC: What can we eat? @ G(LP+RC, eat())
+ARI: I'm afraid I can't help you.
+RC: Are there no cakes? @ G(RC, eat(cake))
+ARI: Yes. @ AG(RC, eat(cake))
+RC: Oh.
+LP: Yes, there are cakes? @ G(LP, eat(cake))
+RC: Yes, there are cakes. @ AG(LP, eat(cake))
+RC: What kind of cakes are there? @ G(RC, eat(cake))
+ARI: Of course. @ AG(LP, eat(cake))
+RC: Sugar cake? Honey cake? Are there honey cakes? @ G(RC, eat(cake))
+ARI: Lunch will be offered at midday if you have afternoon appointments. A snack may be offered after your appointment with the nurse. @ AG(RC, eat())
+RC: Oh! That's nice.
+LP: What's on the menu? @ G(LP, eat())
+RC: What's on the menu? @ G(RC, eat())
+ARI: Lunch will be offered at midday if you have afternoon appointments. A snack may be offered after your appointment with the nurse. @ AG(LP, eat()); AG(RC, eat())
+RC: Is there any ham? @ G(RC, eat(ham))
+ARI: Yes. @ AG(RC, eat(ham))
+LP: How do we inform them of any allergies? @ G(LP, get-info(allergy_info))
+RC: And what should you do if you have an allergy? @ G(RC, get-info(allergy_info))
+ARI: I'm afraid I can't help you.
+RC: If you are ill, if you can't eat...

@@ -1,0 +1,32 @@
+ARI: Hello, my name is ARI. How can I help you? # greet(); inform(ari(name)); offer-help()
+RC: Hello ARI. # greet()
+LP: I need to go to room 17 for treatment. So, I don't know how to get to room 17. # request(directions(room_17)) @ G(LP, go-to(room_17))
+RC: ARI, could you please tell us how to get to room 17? For a... # request(directions(room_17)) @ G(LP+RC, go-to(room_17))
+ARI: Yes. You continue along the building, take the lift and it's on the second floor. # affirm(); inform(directions(room_17)) @ AG(LP+RC, go-to(room_17))
+RC: Ok. And is it on the left or the right... on the second floor? # acknowledge(); request(location(room_17)) @ CG(LP+RC, go-to(room_17)); G(RC, go-to(room_17))
+ARI: Sorry, I don't have this information. You have to go to the reception. # cant-help(); suggest(going-to(reception))
+RC: Ok. The reception is on the ground floor, is that right? # acknowledge(); request(location(reception)) @ G(RC, go-to(reception))
+ARI: Yes. Absolutely. # affirm() @ AG(RC, go-to(reception))
+LP: Are we, are we expected in room 17? Is there someone who will see us or guide us?
+RC: Yes, do you know if there is someone who will come and welcome us to room 17? And what paperwork do we need to provide?
+ARI: I'll call a nurse to find out. Sorry, I don't have this information. # call-nurse(); cant-help()
+RC: Ok, thank you, I'll wait for you to call the nurse then. # thank()
+ARI: Yes. # affirm()
+RC: Can I sit somewhere with my husband while I wait? # request(chair) @ G(RC, sit())
+ARI: Yes. Of course. # affirm() @ AG(RC, sit())
+LP: I have an appointment at 12.30 PM, is it going ahead? I'm not late or too early?
+RC: Um, we have... # incomplete-da()
+ARI: Sorry, I don't have this information. # cant-help()
+RC: I'm the one you have to talk to because if not...
+LP: I have an appointment at 12.30 PM. Will there be any delay?
+RC: Um hello, we would like to know if there is a delay to welcome us to room 17, we have an appointment in room 17.
+ARI: No. # disaffirm()
+RC: Because we have another appointment later in another department.
+ARI: Yes. Of course. # affirm()
+LP: Do you know what type of appointment I have, is it an anaesthetist, a surgeon, who'll inform me or something else or an examination?
+RC: I didn't quite understand. # r-paraph()
+LP: Um, I have an appointment, is it, is it a treatment this time, is it a surgeon, an anaesthetist or a radiologist who'll take... # p-paraph()
+RC: Hello, are you able to tell me who is going to see us? Is it an an anaesthetist, the surgeon, a nurse? For this... for this operation.
+ARI: Sorry, I don't have this information. You have to go to the reception. # cant-help(); suggest(going-to(reception))
+RC: Ok, thank you. # acknowledge(); thank()
+ARI: Thank you. See you soon. Have a nice day. # thank(); bye()

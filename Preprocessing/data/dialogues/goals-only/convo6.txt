@@ -1,0 +1,12 @@
+ARI: Hello, my name is ARI. How can I help you?
+RP: Yes, I do. I'd like to know where the cafeteria is, um or, I don't know, a restaurant here in the hospital? @ G(RP, go-to(cafe))
+ARI: You have to enter the second building behind you. Then it's the second door on the left. @ AG(RP, go-to(cafe))
+LC: Um, can you repeat that please?
+ARI: You have to enter the second building behind you. Then it's the second door on the left.
+RP: I'm hard of hearing and the sound is a little low, can you repeat that please?
+ARI: You have to enter the second building behind you. Then it's the second door on the left.
+RP: Ok, thank you. @ CG(RP, go-to(cafe))
+RP: So, another question...
+LC: Um, hello. Do you know where the toilets are? @ G(LC, go-to(toilet))
+ARI: Very easy! You have to go to the corridor at the end of the room. It's the second door on the right. @ AG(LC, go-to(toilet))
+LC: Thank you. @ CG(LC, go-to(toilet))

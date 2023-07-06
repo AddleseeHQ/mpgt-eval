@@ -1,0 +1,36 @@
+LP: Hello ARI.
+ARI: Hello, my name is ARI. How can I help you?
+LP: Ask how...
+RC: Hello. I'd like to have a small meal, can you tell me where we should go? @ G(RC, eat())
+ARI: There are a few options available as part of your visit, and there's also a cafeteria on the ground floor. @ AG(RC, eat())
+RC: Can you tell me when the cafeteria opens? @ G(RC, get-info(cafe(opening_times(opening_time)))
+ARI: From 11 AM to 4 PM. @ AG(RC, get-info(cafe(opening_times(opening_time)))
+RC: From 11 AM to 4 PM, is that right? @ G(RC, get-info(cafe(opening_times(opening_time)))
+ARI: Yes, you're right. @ AG(RC, get-info(cafe(opening_times(opening_time)))
+RC: Thank you. @ CG(RC, get-info(cafe(opening_times(opening_time)))
+ARI: You're welcome, I'm here to answer your questions.
+RC: Is the cafeteria wheelchair accessible? Because my friend is in a wheelchair and he can't get around by himself. @ G(RC, get-info(cafe(accessible)))
+ARI: Yes, absolutely. @ AG(RC, get-info(cafe(accessible)))
+RC: Thank you. @ CG(RC, get-info(cafe(accessible)))
+LP: Hmm, ARI, could you tell me how to get to the cafeteria? @ G(LP, go-to(cafe))
+ARI: There's a cafeteria on the ground floor, near the courtyard. @ AG(LP, go-to(cafe))
+RC: ARI, could you tell me if my appointment is at 11 AM? @ G(RC, get-info(appt(time)))
+ARI: Sorry, I don't have this information. You have to go to the reception.
+LP: He might know how to get there.
+LP: Can you tell me how to get to the reception? @ G(LP, go-to(reception))
+ARI: The reception is just behind me. Remember to take a ticket on your right. @ AG(LP, go-to(reception))
+RC: Ah, thank you. @ CG(LP, go-to(reception))
+LP: It's quite simple. Thank you ARI.
+ARI: You're welcome. I'm here to answer your questions.
+LP: It would be nice if we knew how to take the lift.
+LP: ARI, could you tell us how to get to the lift? @ G(LP+RC, go-to(lifts))
+ARI: The lifts are at the entrance on the left. @ AG(LP+RC, go-to(lifts))
+LP: Do these lifts take us to the cafeteria, or do we have to take something else?
+ARI: I'm sorry, but I can't help you.
+RC: Is the cafeteria on the ground floor? @ G(RC, go-to(cafe))
+ARI: Yes, you're right.
+RC: So we don't have to take the lift to get to the cafeteria?
+ARI: No, you do not.
+RC: Thank you.
+LP: Thank you very much ARI.
+ARI: You're welcome, thank you, see you later and have a nice day.
