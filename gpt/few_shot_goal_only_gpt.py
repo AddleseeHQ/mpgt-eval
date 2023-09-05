@@ -31,7 +31,7 @@ def generate_reasoning_prompt(src, few):
 
 def create_examples(tdf):
     final_text = ""
-    for x in range(0, 1): #len(tdf)-1):
+    for x in range(0, 2): #len(tdf)-1):
         final_text = final_text + "input: " + tdf["src"][x] + " output: " + tdf["tgt"][x] + " "
     final_text = final_text + "input: "
     return final_text
@@ -58,11 +58,11 @@ def predict(src, few, style):
     return response.choices[0].message.content
 
 def process(style, few, run):
-    test_data_path = "../Preprocessing/data/split-diogs/pcent-20/goal-given-dst/run" + run + "-test.jsonl"
+    test_data_path = "../Preprocessing/data/split-diogs/pcent-20/goal-only/run" + run + "-test.jsonl"
     test_df = pd.read_json(test_data_path, lines=True)
 
     if few:
-        train_data_path = "../Preprocessing/data/split-diogs/pcent-20/goal-given-dst/run" + run + "-train.jsonl"
+        train_data_path = "../Preprocessing/data/split-diogs/pcent-20/goal-only/run" + run + "-train.jsonl"
         train_df = pd.read_json(train_data_path, lines=True)
 
     predictions = []
@@ -91,7 +91,7 @@ def process(style, few, run):
         sleep(45)
 
     test_df['preds'] = predictions
-    test_df.to_csv('few-shot-goal-given-dst-' + style + '-run' + run + '.csv') #TODO, change each experiment
+    test_df.to_csv('few-shot-goal-only-' + style + '-run' + run + '.csv') #TODO, change each experiment
 
 styles = ["basic", "specific", "story", "roleplay", "annotation", "reasoning"]
 for style in styles:

@@ -31,7 +31,7 @@ def generate_reasoning_prompt(src, few):
 
 def create_examples(tdf):
     final_text = ""
-    for x in range(0, 1): #len(tdf)-1):
+    for x in range(0, 2): #len(tdf)-1):
         final_text = final_text + "input: " + tdf["src"][x] + " output: " + tdf["tgt"][x] + " "
     final_text = final_text + "input: "
     return final_text
